@@ -1,0 +1,37 @@
+.auth-warp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+h3 {
+    font-size: 3em;
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul > li {
+    margin: 1em;
+    font-size: 1.5em;
+    color: var(--text-color);
+}
