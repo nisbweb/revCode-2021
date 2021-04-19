@@ -9,7 +9,7 @@ import firebase from "firebase";
 import { useState } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import Alert from "@material-ui/lab/Alert";
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
   const history = useHistory();
@@ -29,7 +29,22 @@ const Home = () => {
       .signInWithPopup(googleProvider)
       .then(({ user }) => {
         setSucc(true);
-        history.push('/instruction')
+        localStorage.setItem("uid", user.uid);
+        localStorage.setItem("score", 0);
+        localStorage.setItem("displayName", user.displayName);
+        firebaseApp.db
+          .collection("users")
+          .doc(user.uid)
+          .set({
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+            score: {
+              q1: 0,
+              q2: 0,
+              q3: 0,
+            },
+          })
+          .then(() => history.push("/instruction"));
       })
       .catch((error) => {
         setErr({ msg: error.message, open: true });
@@ -42,7 +57,7 @@ const Home = () => {
     <div className="div">
       <h1 className="reverse">esrever</h1>
       <Lottie options={defaultOptions} width={300} height={300} />
-      <h1>Coding</h1>
+      <h1 className="h1">Coding</h1>
       <Button
         onClick={auth}
         style={{

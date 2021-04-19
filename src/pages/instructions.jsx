@@ -1,19 +1,17 @@
 import "../css/instructions.css";
 import firebaseapp from "../firebase/firebaseConfig";
 import Lottie from "react-lottie";
-import animData from "../assets/JSON/login.json";
 import animDataD from "../assets/JSON/rules.json";
 import { Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
 import UseAnimations from "react-useanimations";
-import alertTriangle from "react-useanimations/lib/alertTriangle";
 import infinity from "react-useanimations/lib/infinity";
 import { useState, useEffect } from "react";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import LoginPlease from "../components/loginPlease";
+import { useHistory } from "react-router-dom";
 
 const Instructions = () => {
-  const history = useHistory();
   const [active, setActive] = useState(false);
   useEffect(() => {
     firebaseapp.db
@@ -23,6 +21,7 @@ const Instructions = () => {
         setActive(data.data().start);
       });
   }, []);
+  const history = useHistory();
   if (firebaseapp.auth.currentUser) {
     let insOptions = {
       loop: true,
@@ -35,11 +34,11 @@ const Instructions = () => {
     let styles = {
       width: "60%",
       backgroundColor: "#424242",
-      padding: "2em"
+      padding: "2em",
     };
     return (
       <div className="div">
-        <h3>Instructions</h3>
+        <h3 className="h3">Instructions</h3>
         <Paper style={styles} elevation={0}>
           <Grid container spacing={0}>
             <Grid className="flex" xs={3} item>
@@ -48,7 +47,7 @@ const Instructions = () => {
             <Grid xs={9} item>
               <ul>
                 {[1, 2, 3, 4, 5].map((value) => (
-                  <li>
+                  <li key={value}>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Veritatis temporibus rerum officiis ad, in magni?
                   </li>
@@ -58,7 +57,7 @@ const Instructions = () => {
           </Grid>
         </Paper>
         <Button
-          onClick={() => history.goBack()}
+          onClick={() => history.push("/game")}
           style={{
             backgroundColor: "var(--main-color)",
             color: "white",
@@ -75,35 +74,7 @@ const Instructions = () => {
         </Button>
       </div>
     );
-  } else {
-    const errOptions = {
-      loop: true,
-      autoplay: true,
-      animationData: animData,
-      rendererSettings: {
-        preserveAspectRatio: "xMidYMid slice",
-      },
-    };
-    return (
-      <div className="auth-warp">
-        <h3>this page is locked please login to continue</h3>
-        <Lottie options={errOptions} width={300} height={300} />
-        <Button
-          onClick={() => history.goBack()}
-          style={{
-            backgroundColor: "var(--main-color)",
-            color: "white",
-            width: "15em",
-            marginTop: "2rem",
-          }}
-          variant="contained"
-        >
-          <UseAnimations animation={alertTriangle} strokeColor="white" />
-          &nbsp;&nbsp;&nbsp; Go back
-        </Button>
-      </div>
-    );
-  }
+  } else return <LoginPlease />;
 };
 
 export default Instructions;
