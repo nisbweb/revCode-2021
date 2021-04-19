@@ -7,7 +7,7 @@ import Footer from "./components/footer";
 function App() {
   return (
     <>
-      <AppBar color="transparent" position="static">
+      <AppBar style={{backgroundColor: "black"}} color="inherit" position="sticky">
         <Toolbar>
           <Typography
             style={{
