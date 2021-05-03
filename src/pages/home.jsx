@@ -28,23 +28,29 @@ const Home = () => {
     firebaseApp.auth
       .signInWithPopup(googleProvider)
       .then(({ user }) => {
-        setSucc(true);
         localStorage.setItem("uid", user.uid);
-        localStorage.setItem("score", 0);
         localStorage.setItem("displayName", user.displayName);
         firebaseApp.db
           .collection("users")
           .doc(user.uid)
-          .set({
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-            score: {
-              q1: 0,
-              q2: 0,
-              q3: 0,
-            },
-          })
-          .then(() => history.push("/instruction"));
+          .get()
+          .then((data) => {
+            if (data.exists) {
+              localStorage.setItem("score", data.data().score);
+              history.push("/instruction");
+            } else
+              firebaseApp.db
+                .collection("users")
+                .doc(user.uid)
+                .set({
+                  displayName: user.displayName,
+                  photoURL: user.photoURL,
+                  score: 0,
+                  level: 1,
+                })
+                .then(() => history.push("/instruction"));
+          });
+        setSucc(true);
       })
       .catch((error) => {
         setErr({ msg: error.message, open: true });
