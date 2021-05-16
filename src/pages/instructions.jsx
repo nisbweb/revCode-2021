@@ -13,6 +13,17 @@ import { useHistory } from "react-router-dom";
 
 const Instructions = () => {
   const [active, setActive] = useState(false);
+  let points = [
+    "We will be leveraging the HackerRank platform to conduct this event",
+    'The link to access the competition on <a href="https://www.hackerrank.com/reverse-coding-2021-1" target="_blank">HackerRank</a>',
+    "You can login and attempt only on 17th Monday 2021 between 5:30 PM – 7:30 PM IST.",
+    "The competition duration is 120 minutes.",
+    "This is a fun event which is for 500 marks having 6 programming questions.<ul><li>Question No. 1,2,3 -50 marks</li><li>Question No. 4,5- 100 marks</li><li>Question No. 6 -150 marks .</li></ul>",
+    "Please use any programming language of your choice.",
+    "Please ensure strong internet connectivity at your end.",
+    "Please give this competition continuously in one go.Do not try copying/cheating/plagiarism and any attempt to do so will result in disqualification.",
+    "We wish you the best of luck in the competition, but most importantly, we hope you have fun :)",
+  ];
   useEffect(() => {
     firebaseapp.db
       .collection("admin")
@@ -46,11 +57,13 @@ const Instructions = () => {
             </Grid>
             <Grid xs={9} item>
               <ul>
-                {[1, 2, 3, 4, 5].map((value) => (
-                  <li key={value}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Veritatis temporibus rerum officiis ad, in magni?
-                  </li>
+                {points.map((value, index) => (
+                  <li
+                    key={index}
+                    dangerouslySetInnerHTML={{
+                      __html: value,
+                    }}
+                  ></li>
                 ))}
               </ul>
             </Grid>
