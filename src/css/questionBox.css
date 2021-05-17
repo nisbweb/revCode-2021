@@ -1,4 +1,8 @@
 #standard-basic-helper-text {
-    color: var(--main-color);
-    font-size: 1em;
+  color: var(--main-color);
+  font-size: 1em;
+}
+.MuiInputBase-input::placeholder,
+.MuiInput-input::placeholder {
+  color: var(--text-color) !important;
 }

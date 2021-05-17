@@ -56,7 +56,6 @@ const QuestionBox = (props) => {
             id="standard-basic"
             label="Input"
             color="secondary"
-            variant="outlined"
             helperText={inputMessage[props.number - 1]}
             fullWidth
             onChange={(event) => setInput(event.target.value)}
@@ -108,7 +107,7 @@ const QuestionBox = (props) => {
               }}
               variant="contained"
               color="inherit"
-              onClick={() => window.open(hackerrank[props.number], "_blank")}
+              onClick={() => window.open(hackerrank[props.number - 1], "_blank")}
             >
               Code
             </Button>

@@ -24,7 +24,7 @@ const Footer = () => {
           <span style={{display: 'flex'}}>
             <UseAnimations onClick={() => window.open('https://github.com/nisbweb', '_blank')} animation={github} strokeColor="white" /> &nbsp;&nbsp;&nbsp;
             <UseAnimations onClick={() => window.open('https://www.linkedin.com/in/nie-ieee-student-branch-779682146/', '_blank')} animation={linkedin} strokeColor="white" /> &nbsp;&nbsp;&nbsp;
-            <UseAnimations onClick={() => window.open('https://www.instagram.com/nie_ieee_student_branch/', '_blank')} animation={instagram} strokeColor="white" /> &nbsp;&nbsp;&nbsp;
+            <UseAnimations onClick={() => window.open('https://www.instagram.com/ieee_nie/', '_blank')} animation={instagram} strokeColor="white" /> &nbsp;&nbsp;&nbsp;
           </span>
       </div>
     </>
