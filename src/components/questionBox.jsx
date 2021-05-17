@@ -96,7 +96,7 @@ const QuestionBox = (props) => {
             }}
             variant="text"
             color="inherit"
-            onClick={() => run(input)}
+            onClick={() => run(input.trim())}
           >
             Run
           </Button>

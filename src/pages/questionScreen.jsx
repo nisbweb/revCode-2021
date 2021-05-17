@@ -1,11 +1,8 @@
-import Grid from "@material-ui/core/Grid";
 import firebaseapp from "../firebase/firebaseConfig";
 import LoginPlease from "../components/loginPlease";
 import QuesBox from "../components/questionBox";
-import { useState, useEffect } from "react";
 
 const Question = () => {
-  let [score, setScore] = useState(0);
   let ques = [1, 2, 3, 4, 5, 6];
   if (firebaseapp.auth.currentUser) {
     return (

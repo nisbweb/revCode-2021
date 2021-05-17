@@ -56,9 +56,6 @@ const Home = () => {
         setErr({ msg: error.message, open: true });
       });
   };
-  const authOut = () => {
-    firebaseApp.auth.signOut();
-  };
   return (
     <div className="div">
       <h1 className="reverse">esrever</h1>
@@ -77,7 +74,7 @@ const Home = () => {
         <UseAnimations animation={activity} strokeColor="white" />{" "}
         &nbsp;&nbsp;&nbsp; Login
       </Button>
-      <Button
+      {/* <Button
         onClick={authOut}
         style={{
           backgroundColor: "var(--main-color)",
@@ -89,7 +86,7 @@ const Home = () => {
       >
         <UseAnimations animation={activity} strokeColor="white" />{" "}
         &nbsp;&nbsp;&nbsp; logout
-      </Button>
+      </Button> */}
       <Snackbar
         open={succSnack}
         onClose={() => setSucc(false)}
