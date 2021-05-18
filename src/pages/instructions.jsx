@@ -16,7 +16,7 @@ const Instructions = () => {
   let points = [
     "We will be leveraging the HackerRank platform to conduct this event",
     'The link to access the competition on <a href="https://www.hackerrank.com/reverse-coding-2021-1" target="_blank">HackerRank</a>',
-    "You can login and attempt only on 17th Monday 2021 between 5:30 PM – 7:30 PM IST.",
+    "You can login and attempt only on 18th Monday 2021 between 5:30 PM – 7:30 PM IST.",
     "The competition duration is 120 minutes.",
     "This is a fun event which is for 500 marks having 6 programming questions.<ul><li>Question No. 1,2,3 -50 marks</li><li>Question No. 4,5- 100 marks</li><li>Question No. 6 -150 marks .</li></ul>",
     "Please use any programming language of your choice.",
