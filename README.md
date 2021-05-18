@@ -1,10 +1,23 @@
-# Getting Started with Create React App
+# Reverse Coding 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of the Reverse Coding 2021 contest held as a part of RUBIX 2021.
+This project requires a firebase project to run with one required collection
+- admin:
+    - This collection should have a document which a field called start , set to true. This controls whether the application can move ahead of the instructions page or not.
 
-## Available Scripts
+Firebase auth is also required for login.
+You will need to specify the following environmental variables in a .env file
 
-In the project directory, you can run:
+```
+REACT_APP_apiKey=<Your Firebase API KEY>
+REACT_APP_authDomain=<Your Firebase auth domain>
+REACT_APP_projectId=<Your Firebase project ID>
+REACT_APP_storageBucket=<Your Firebase storage bucket name>
+REACT_APP_messagingSenderId=<Your firebase messaging sender ID>
+REACT_APP_appId=<Your Firebase APP ID>
+```
+
+## Commands available
 
 ### `npm start`
 
@@ -39,32 +52,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

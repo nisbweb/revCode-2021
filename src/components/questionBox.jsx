@@ -14,7 +14,7 @@ const QuestionBox = (props) => {
     "Input a valid integer positive integer below 10000000",
     "Input a comma separated set of integers. example: 1,2,3,4,5",
     "Input a string with only alphabets in lowercase",
-    "Input a string with only alphabets",
+    "Input a string with only alphabets ",
     "Input a string with only alphabets",
   ];
   let hackerrank = [
