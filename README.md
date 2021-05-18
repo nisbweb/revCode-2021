@@ -1,6 +1,8 @@
 # Reverse Coding 2021
 
 This project is part of the Reverse Coding 2021 contest held as a part of RUBIX 2021.
+The code for each question can be found at src/functions/index.min.js.
+
 This project requires a firebase project to run with one required collection
 - admin:
     - This collection should have a document which a field called start , set to true. This controls whether the application can move ahead of the instructions page or not.
@@ -8,7 +10,6 @@ This project requires a firebase project to run with one required collection
 Firebase auth is also required for login.
 You will need to specify the following environmental variables in a .env file
 
-The code for each question can be found at src/functions/index.min.js.
 
 ```
 REACT_APP_apiKey=<Your Firebase API KEY>
