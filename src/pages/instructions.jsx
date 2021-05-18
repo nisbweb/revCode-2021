@@ -19,6 +19,7 @@ const Instructions = () => {
     "You can login and attempt only on 18th May 2021 between 5:30 PM – 7:30 PM IST.",
     "The competition duration is 120 minutes.",
     "This is a fun event which is for 500 marks having 6 programming questions.<ul><li>Question No. 1,2,3 -50 marks</li><li>Question No. 4,5- 100 marks</li><li>Question No. 6 -150 marks .</li></ul>",
+    "Your task is to use the input output pairs you find ,to deduce the logic and then replicate the same in the hackerrank contest questions.",
     "Please use any programming language of your choice.",
     "Please ensure strong internet connectivity at your end.",
     "Please give this competition continuously in one go.Do not try copying/cheating/plagiarism and any attempt to do so will result in disqualification.",
