@@ -10,10 +10,10 @@ const QuestionBox = (props) => {
   let [input, setInput] = useState("");
   const run = (data) => setOutput(functions[`ques${props.number}`](data));
   let inputMessage = [
-    "Input a valid integer",
-    "Input a valid integer below 10000000",
+    "Input a valid positive integer",
+    "Input a valid integer positive integer below 10000000",
     "Input a comma separated set of integers. example: 1,2,3,4,5",
-    "Input a string with only alphabets",
+    "Input a string with only alphabets in lowercase",
     "Input a string with only alphabets",
     "Input a string with only alphabets",
   ];

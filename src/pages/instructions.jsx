@@ -22,7 +22,7 @@ const Instructions = () => {
     "Your task is to use the input output pairs you find ,to deduce the logic and then replicate the same in the hackerrank contest questions.",
     "Please use any programming language of your choice.",
     "Please ensure strong internet connectivity at your end.",
-    "Please give this competition continuously in one go.Do not try copying/cheating/plagiarism and any attempt to do so will result in disqualification.",
+    "Please give this competition continuously in one go. Do not try copying/cheating/plagiarism and any attempt to do so will result in disqualification.",
     "We wish you the best of luck in the competition, but most importantly, we hope you have fun :)",
   ];
   useEffect(() => {
