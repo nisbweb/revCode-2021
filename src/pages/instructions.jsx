@@ -14,6 +14,7 @@ import { useHistory } from "react-router-dom";
 const Instructions = () => {
   const [active, setActive] = useState(false);
   let points = [
+    'NOTE : This contest is now over, this website was part of the event and has been made opensource at <a href="https://github.com/nisbweb" target="_blank">NISBs github</a>',
     "We will be leveraging the HackerRank platform to conduct this event",
     'The link to access the competition on <a href="https://www.hackerrank.com/reverse-coding-2021-1" target="_blank">HackerRank</a>',
     "You can login and attempt only on 18th May 2021 between 5:30 PM – 7:30 PM IST.",
