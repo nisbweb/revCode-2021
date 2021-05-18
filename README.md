@@ -8,6 +8,8 @@ This project requires a firebase project to run with one required collection
 Firebase auth is also required for login.
 You will need to specify the following environmental variables in a .env file
 
+The code for each question can be found at src/functions/index.min.js.
+
 ```
 REACT_APP_apiKey=<Your Firebase API KEY>
 REACT_APP_authDomain=<Your Firebase auth domain>
